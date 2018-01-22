@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    .back{
+        position: absolute;
+    }
+    .gate{
+        position: absolute;
+        top: 245px;
+        left: 405px;
+    }
+</style>
+<body>
+    <div><img class="back" src="Scene1-A.jpg"></div>
+    <div><img class="gate" src="Scene1-B.jpg"></div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+     addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function(){
+        var var1= $(".gate");
+        var1.on("click",function(){
+           var ans=prompt("Name the place");
+            if(ans=="Museum"||ans=="museum"||ans=="american museum of natural history")
+            {
+                alert("Correct!");
+                window.location="2-level2.html";
+            }
+            else{
+                alert("Wrong Answer! Try Again");
+            }
+        });
+    });
+</script>
+</html>

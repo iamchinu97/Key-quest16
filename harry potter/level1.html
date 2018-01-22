@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LEVEL 1</title>
+</head>
+<style>
+    body{
+    overflow: hidden;
+    }
+    .pot{
+        position: absolute;
+        top: 201px;
+    left: 576px;
+    }
+    .egg{
+        position: absolute;
+       top: 157px;
+    left: 322px;
+    }
+    .floor{
+        position: absolute;
+        top:300px;
+         left:590px ;
+    }
+    .grid{
+        position: absolute;
+            top: 124px;
+          left: 35px;
+    }
+    .box{
+        position: absolute;
+                top: 80px;
+    left: 251px;
+
+    }
+    .fruits{
+        position: absolute;
+            top: 158px;
+    left: 433px;
+    }
+
+    .a{
+        position: absolute;
+               top: 156px;
+              left: 448px;
+             display: none
+    }
+   .I{
+        position: absolute;
+        top: 159px;
+          left: 347px;
+        display: none;
+    }
+   .h{
+        position: absolute;
+        top:220px;
+        left:600px;
+	display:none;
+       
+    }
+   .r{
+        position: absolute;
+       top:303px;
+        left:600px;
+       display: none;
+        
+    }
+   .d{
+        position: absolute;
+            top: 89px;
+          left: 262px;
+        display: none;
+    }
+   .g{
+        position: absolute;
+       top: 172px;
+    left: 73px;
+    display: none;
+    }
+    /*body{
+        background: url(Hagrid.png) no-repeat;
+        user-content: none;
+    }*/
+    .bg{
+        position: absolute;
+    }
+   
+</style>
+<body>
+    <div class="bg"> <img class="bg" src="Hagrid.png"></div>
+    <div class="pot"> <img class="pot" src="pot.png" />  </div>
+    <div class="egg"> <img class="egg" src="egg.png" />  </div>
+    <div class="floor"> <img class="floor" src="floor.png" />  </div>
+    <div class="grid"> <img class="grid" src="grid.png" />  </div>
+    <div class="box"> <img class="box" src="box.png" />  </div>
+    <div class="fruits"> <img class="fruits" src="fruits.png" />  </div>
+     <div class="a"> <img class="a" src="a.png" />  </div>
+    <div class="I"> <img class="I" src="I.png" />  </div>
+     <div class="g"> <img class="g" src="g.png" />  </div>
+     <div class="h"> <img class="h" src="h.png" />  </div>
+     <div class="r"> <img class="r" src="r.png" />  </div>
+     <div class="d"> <img class="d" src="d.png" />  </div>
+    
+</body>
+    <script src="jquery1.js"></script>
+<script>
+    
+    
+          addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    
+     $(document).ready(function () {
+       var fruits=$(".fruits");
+        var a= $(".a");
+        var floor= $(".floor");
+        var pot=$(".pot");
+           var egg=$(".egg");
+           var grid=$(".grid");
+           var box=$(".box");
+           var i=$(".I");
+           var h=$(".h");
+           var r=$(".r");
+           var g=$(".g");
+           var d=$(".d");
+        fruits.on("click", function () {
+          a.show();
+        });
+     pot.on("click", function () {
+          h.show();
+        });
+     floor.on("click", function () {
+          r.show();
+        });
+     box.on("click", function () {
+          d.show();
+        });
+     grid.on("click", function () {
+          g.show();
+        
+        });
+        egg.on("click", function () {
+          i.show();
+        
+        });
+     
+      i.on("click", function () {
+        
+            var ans = prompt('enter the answer!');
+            if (ans=="hagrid") {
+                alert("Correct!");
+                window.location.href="level2.html";
+            }
+        });
+    });
+    </script>
+</html>

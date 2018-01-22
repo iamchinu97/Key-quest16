@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LEVEL2</title>
+</head>
+<style>
+    *{
+        transition:all 1s ease-in;
+    }
+    
+    body {
+        background: url(lvl5_0001_Layer-3.png) no-repeat fixed center;
+    }
+    .palace {
+        position: absolute;
+        top:300px;
+        left:92px;
+    }
+    </style>
+    <body>
+    <div class="castle"> <img class="palace" src="lvl5_0000_King-Srikant-has-accidentaly-shrunk-Little-Rohit-by-his-wand.Th.png"/></div>
+    </body>
+    
+    <script src="jquery1.js"></script>
+        <script>
+             $(document).ready(function () {
+                 var Palace=$(".palace");
+                 Palace.on("click",function() {
+                    
+                    
+                         window.location = "level_1.html ";
+                    
+             // 
+                 });
+             });
+    </script>
+</html>

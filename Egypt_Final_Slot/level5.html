@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL5</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        transition: all 1s ease-in;
+    }
+    
+    .bg {
+        background: url(level5.png) no-repeat fixed center;
+    }
+    
+    .txt {
+        position: absolute;
+        top: 480px;
+        left: 300px;
+    }
+</style>
+
+<body>
+    <div class="bg1"><img src="images/level5.png"></div>
+
+    <div class="txt1"> <img class="txt" src="images/level5_txt.png" /></div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+    addEventListener("click", function () {
+        var el = document.documentElement,
+            rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+        rfs.call(el);
+    });
+    $(document).keydown(false);
+    $(document).on("contextmenu", function (e) {
+        return false;
+    });
+    $(document).ready(function () {
+        var Txt = $(".txt");
+        Txt.on("click", function () {
+
+            var ans = prompt('enter the answer');
+            if (ans == 'cdcjwtqjvdw') { //CHANGE THE ANSWER
+                alert("Correct!");
+                window.location.href = " "
+            } else {
+                alert("wrong");
+            }
+        });
+    });
+</script>
+
+</html>

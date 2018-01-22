@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LEVEL1</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        transition:all 1s ease-in;
+    }
+    .bg{
+            position:absolute;
+        margin: auto;
+            text-align: center;
+        
+    }
+    .palace {
+        position: absolute;
+        top:100px;
+        left:600px;
+    }
+    </style>
+    <body>
+         <div class="bg">
+        
+        <img src="bg.png">
+        </div>
+    <div class="castle"> <img class="palace" src="palace.png"/></div>
+    </body>
+    
+    <script src="jquery1.js"></script>
+        <script>
+
+addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+             $(document).ready(function () {
+                 var Palace=$(".palace");
+                 Palace.on("click",function() {
+                    
+                     var ans=prompt('Arrange from Jaya Bachchan to Amitabh Bachchan');
+                     if(ans=='edwart'){
+                         alert("Correct!");
+                         window.location = "level2.html ";
+                     }
+                      else {
+                alert("wrong");
+            }  
+                 });
+             });
+    </script>
+</html>

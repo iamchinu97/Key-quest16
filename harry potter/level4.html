@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>level 5</title>
+</head>
+<style>
+    body{
+    overflow: hidden;
+    }
+     * {
+        transition: all 1s ease-in;
+    }
+    .snitch{
+    position: absolute;
+        left:-64px;
+        top:164px;
+    }
+    .face{
+    position: absolute;
+        left:373px;
+        top:165px;
+        }
+     .bg{
+        position: absolute;
+    }
+    
+   
+    </style>
+    <body>
+         <div class="bg"> <img class="bg" src="level41.png"></div>
+        <div class="snitch"> <img class ="snitch" src="snitch.png" />
+            </div>
+            <div class="face"><img class="face" src="face.png"/></div>
+      </body>
+     <script src="jquery1.js"></script>
+    <script>
+        
+            addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function () {
+        var f = $(".face");
+        var s= $(".snitch");
+     
+        f.on("click", function () {
+        
+            s.css("transform", "translateX(400px)");
+
+        });
+
+        s.on("click", function () {
+            var ans = prompt('enter the answer in small letters!');
+            if (ans == "ioatc") {
+                alert("Correct!");
+                 window.location.href="level5.html";
+            }
+            
+        })
+    });
+</script>
+
+</html>

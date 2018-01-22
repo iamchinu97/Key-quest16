@@ -1,0 +1,208 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>LEVEL3</title>
+</head>
+
+<style>
+    {
+        transition:all 1s ease-in;
+    }
+    
+    .bcgnd{
+       position: absolute;
+       overflow-x: hidden;
+        top: 0;
+        left: 0;
+    }
+    
+    .wdc
+    {
+        
+        position: absolute;
+              top: 20px;
+    left: 72.05px;
+    }
+     .shah
+{
+        
+        position: absolute;
+      top: 5px;
+    left: 1122.5px;
+    }
+    .newyork
+    {
+        
+        position: absolute;
+      top: 123.5px;
+    left: 842.5px;
+      
+       
+    }
+    .ohio
+    {
+          position: absolute;
+    top: 207px;
+    left: 756px;
+    z-index: 12;
+    }
+    .georgia
+    
+    {
+        
+        position: absolute;
+      top: 368px;
+    left: 756.5px;
+       
+        
+    }
+      .texas
+    
+    {
+        
+        position: absolute;
+          top: 347px;
+    left: 320.8px
+
+        
+        
+    }
+      .california
+    
+    {
+        
+        position: absolute;
+      top: 162.72px;
+    left: 21.5px;
+        
+    }
+    .date1
+{
+    width:7%;
+position:absolute;
+top: 24.72%;
+left: 2.5%;
+ display: none;
+
+
+}
+.date2
+{
+width:8%;
+position:absolute;
+top: 12%;
+        left: 61%;
+ display: none;
+
+}
+    .date3
+{
+width:8%;
+position:absolute;
+top: 30%;
+        left: 50%;
+ display: none;
+
+}
+    .date4
+{
+width:8%;
+position:absolute;
+ top: 55%;
+        left: 53.5%;
+ display: none;
+
+}
+    .date5
+{
+width:8%;
+position:absolute;
+top: 60%;
+        left: 22.8%;
+ display: none;
+
+}
+    .date6
+{
+width:8%;
+position:absolute;
+top:5%;
+left:15%;
+ display: none;
+}
+    </style>
+    <body>
+    <div class ="wdcc"><img class="wdc" src="wdc.png"/></div>
+         <div class ="ny"><img class="newyork" src="newyork.png"/></div>
+         <div class ="clfn"><img class="california" src="california.png"/></div>
+         <div class ="gg"><img class="georgia" src="georgia.png"/></div>
+         <div class ="ohioo"><img class="ohio" src="ohio.png"/></div>
+         <div class ="txs"><img class="texas" src="texas.png"/></div>
+    <div class="info"><img class="shah" src="shah.png"/></div>
+    <div class="datee1"><img class="date1" src="date1.png"/>    </div>
+         <div class="datee2"><img class="date2" src="date2.png"/>    </div>
+         <div class="datee3"><img class="date3" src="date3.png"/>    </div>
+         <div class="datee4"><img class="date4" src="date4.png"/>    </div>
+         <div class="datee5"><img class="date5" src="date5.png"/>    </div>
+         <div class="datee6"><img class="date6" src="date6.png"/>    </div>
+         <div class="backg"><img class="levelmap" src="levelmap.png"/>    </div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+$(document).ready(function()
+{
+var wdcc=$(".wdc");
+    var clfn=$(".california");
+    var ny=$(".newyork");
+    var gg=$(".georgia");
+    var ohioo=$(".ohio");
+    var txs=$(".texas");
+var info=$(".shah");
+var datee1=$(".date1");
+    var datee2=$(".date2");
+    var datee3=$(".date3");
+    var datee4=$(".date4");
+    var datee5=$(".date5");
+    var datee6=$(".date6");
+wdcc.on("click",function()
+{
+datee6.show();
+});
+ ny.on("click",function()
+{
+datee2.show();
+});
+    ohioo.on("click",function()
+{
+datee3.show();
+});
+    gg.on("click",function()
+{
+datee4.show();
+});
+    txs.on("click",function()
+{
+datee5.show();
+});
+    clfn.on("click",function()
+{
+datee1.show();
+});
+    
+    
+info.on("click",function()
+{
+ var ans = prompt('enter the date');
+            if (ans == "7-05-2017")
+            {
+                alert("Correct!");
+                window.location = "L4.html"
+            }
+            else {
+                alert("wrong");
+            }
+    })
+     });
+        </script>
+    
+</html>

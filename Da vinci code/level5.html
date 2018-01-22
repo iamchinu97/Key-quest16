@@ -1,0 +1,144 @@
+<!DOCTYPE>
+<html>
+
+<head>
+
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        background-color: saddlebrown;
+    }
+    
+    #container {
+        position: relative;
+        margin: auto;
+        width: 1080px;
+        height: 675px;
+    }
+    
+    .bg {
+        position: absolute;
+    }
+    
+    .scroll1 {
+        position: absolute;
+        left: 125px;
+        top: 100px;
+    }
+    
+    .scroll2 {
+        position: absolute;
+        left: 350px;
+        top: 100px;
+    }
+    
+    .scroll3 {
+        position: absolute;
+        top: 100px;
+        left: 580px;
+    }
+    
+    .scroll4 {
+        position: absolute;
+        top: 100px;
+        left: 900px;
+    }
+    
+    .display {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        left: 350px;
+        top: 100px;
+        z-index: 3;
+    }
+    
+    #button {
+        position: absolute;
+        display: block;
+        height: 90px;
+        width: 300px;
+        top: 580px;
+        left: 375px;
+    }
+</style>
+<script src="jquery-3.1.0.min.js"></script>
+
+<body>
+    <div id="container">
+        <div class="bg">
+            <img src="Images/lvl5/lvl5_0004_Background.png">
+        </div>
+        <div class="scroll1">
+            <img src="Images/lvl5/lvl5_0000_Layer-4.png">
+        </div>
+        <div class="scroll2">
+            <img src="Images/lvl5/lvl5_0001_Layer-3.png">
+        </div>
+        <div class="scroll3">
+            <img src="Images/lvl5/lvl5_0000_Layer-4.png">
+        </div>
+        <div class="scroll4">
+            <img src="Images/lvl5/lvl5_0000_Layer-4.png">
+        </div>
+        <img src="Images/lvl5/scroll1.png" class="display" id="s1">
+        <img src="Images/lvl5/scroll2.png" class="display" id="s2">
+        <img src="Images/lvl5/scroll3.png" class="display" id="s3">
+        <img src="Images/lvl5/scroll4.png" class="display" id="s4">
+        <div id="button"></div>
+    </div>
+</body>
+
+<script>
+    addEventListener("click", function () {
+        var el = document.documentElement,
+            rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+        rfs.call(el);
+    });
+    $(document).keydown(false);
+    $(document).on("contextmenu", function (e) {
+        return false;
+    });
+    $(document).ready(function () {
+        $('.scroll1').click(function () {
+            $('#s2').fadeToggle();
+            $('#s2').click(function () {
+                $(this).fadeOut();
+            });
+        });
+        $('.scroll2').click(function () {
+            $('#s3').fadeToggle();
+            $('#s3').click(function () {
+                $(this).fadeOut();
+            });
+        });
+        $('.scroll3').click(function () {
+            $('#s1').fadeToggle();
+            $('#s1').click(function () {
+                $(this).fadeOut();
+            });
+        });
+        $('.scroll4').click(function () {
+            $('#s4').fadeToggle();
+            $('#s4').click(function () {
+                $(this).fadeOut();
+            });
+        });
+        $('#button').click(function () {
+            var ans = prompt("Enter the entire cipher with last word replaced wth murderer's name.");
+            if (ans.toLowerCase() === "the name of killer and guilty is henrick") {
+                alert("Correct. YOU HAVE WON!");
+            } else {
+                alert("Try harder buddy.");
+            }
+        });
+    });
+</script>
+
+</html>

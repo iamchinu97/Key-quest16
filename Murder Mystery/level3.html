@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    .back1
+    {
+        position:absolute;
+    }
+    .hc1
+    {
+        position :absolute;
+        top: 471px;
+        left: 717px;
+    }
+    .knife1
+    {
+        position :absolute;
+        top: 549px;
+        left: 592px;
+    }
+    .gun1
+    {
+        position :absolute;
+        top: 510px;
+        left: 212px;
+    }
+    .det1
+    {
+        position :absolute;
+        top: 364px;
+        left: 333px;
+    }
+    .pic1
+    {
+        position :absolute;
+        top: 668px;
+        left: 1118px;
+    }
+    .page1
+    {
+        position :absolute;
+        top: 451px;
+        left: 494px;
+    }
+    .key1
+    {
+        position :absolute;
+        top: 484px;
+        left: 1269px;
+    }
+</style>
+<body>
+    <div class="back"><img class="back1" src="Scene3-A.png"></div>
+    <div class="hc"><img class="hc1" src="Scene3-B.png"></div>
+    <div class="knife"><img class="knife1" src="Scene3-C.png"></div>
+    <div class="gun" ><img class="gun1" src="Scene3-D.png"></div>
+    <div class="det" ><img class="det1" src="Scene3-E.png"></div>
+    <div class="pic" ><img class="pic1" src="Scene3-F.png"></div>
+    <div class="page" ><img class="page1" src="Scene3-G.png"></div>
+    <div class="key" ><img class="key1" src="Scene3-H.png"></div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+    addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function()
+    {
+        var var1= $(".hc1");
+        var var2= $(".knife1");
+        var var3= $(".gun1");
+        var var4= $(".det1");
+        var var5= $(".pic1");
+        var var6= $(".page1");
+        var var7= $(".key1");
+        var4.on("click",function(){
+            var ans=prompt('Thief is not a ____');
+            if(ans=="murderer"||ans=="Murderer")
+            {
+                alert("Correct!");
+                window.location="level4.html";
+            }
+            else
+            {
+                  alert("Wrong Answer!");        
+            }
+        });
+        var1.on("click",function(){
+              alert("Look for Evidence");
+        });
+        var2.on("click",function(){
+              alert("Blood Sample dosent seem to Match");
+        });
+        var3.on("click",function(){
+              alert("Its just Detective's Gun..LOL");
+        });
+        var5.on("click",function(){
+              alert("Wanted!Pschopath on loose..");
+        });
+        var6.on("click",function(){
+               alert("Murder is never followed by a Robbery");
+        });
+        var7.on("click",function(){
+              alert("Seems to be key to some Bedroom..");
+        });
+    });
+</script>
+</html>

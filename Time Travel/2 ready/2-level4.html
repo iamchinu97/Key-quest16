@@ -1,0 +1,84 @@
+<html>
+<head>
+</head>
+<style>
+    .bg{
+        position: absolute;
+    }
+    .a1{
+        position: absolute;
+        left: 808px;
+    top: 172px;
+    }
+    .a2{
+        position: absolute;
+        top: 190px;
+    left: 517px;
+    }
+    .a3{
+        position: absolute;
+        top: 172px;
+    left: 117px;
+    }
+    .a4{
+        position: absolute;
+        left: 1072px;
+    top: 114px;
+    }
+    .a5{
+        position: absolute;
+        top: 520px;
+    }
+</style>
+<body>
+    <div><img class="bg" src="Scene4-A.png"/></div>
+    <div><img class="a1" src="Scene4-B.png"/></div>
+    <div><img class="a2" src="Scene4-C.png"/></div>
+    <div><img class="a3" src="Scene4-D.png"/></div>
+    <div><img class="a4" src="Scene4-E.png"/></div>
+    <div><img class="a5" src="Scene4-F.png"/></div>
+</body>
+    <script src="jquery1.js"></script>
+    <script>
+         addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+        $(document).ready(function(){
+            var a11=$(".a1");
+            var a22=$(".a2");
+            var a33=$(".a3");
+            var a44=$(".a4");
+            var a55=$(".a5");
+            a11.on("click",function(){
+               alert("Seems to be a battle of France"); 
+            });
+            a22.on("click",function(){
+               alert("A sinking ship"); 
+            });
+            a33.on("click",function(){
+               alert("Seems to be aassasination of a president"); 
+            });
+            a44.on("click",function(){
+               alert("Tea Party"); 
+            });
+            a55.on("click",function(){
+               var ans=prompt("Order!");
+                if(ans=="4123")
+                    {
+                        alert("Correct!");
+                        window.location="2-level5.html";
+                    }
+                else{
+                    alert("Guess again");
+                }
+            });
+        });
+    </script>
+</html>

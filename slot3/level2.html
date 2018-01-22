@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL3</title>
+</head>
+<style>
+    * {
+        transition: all 1s ease-in;
+    }
+    
+     .bg{
+            position: relative;
+        margin: auto;
+            text-align: center;
+        
+        }
+.layer2{
+    
+    position: absolute;
+    top:168px;
+    left:648px;
+        z-index: 1000;
+    display: none;
+}
+    .layer3{
+         position: absolute;
+    top: 267px;
+    left:430px;
+        
+    }
+    .layer4{
+         position: absolute;
+    top:248px;
+    left:797px;
+        
+    }
+        
+    </style>
+    <body>
+        <div class="bg">
+        
+        <img src="level2_0002_Layer-1.png">
+        </div>
+    <div class="layer"> <img class="layer2" src="level2_0000_Layer-2.png"/>  </div>
+    <div class="cypher"> <img class="layer3"  src="abcd_0003_Layer-5.png"/>  </div>
+   <div class="cypher1"> <img class="layer4"  src="level2_0000_Layer-3.png"/>  </div>
+        
+</body>
+   
+<script src="jquery1.js"></script>
+<script>
+addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function () {
+        var t = $(".layer2");
+        var t1=$(".layer4");
+        var t2=$(".layer3");
+        t1.hover(function(){
+            t.show();
+        },function(){
+            t.hide();
+            
+        });
+        
+        t2.on("click", function () {
+             var ans = prompt('Guess!');
+            if (ans == "4613" ||ans == "4 6 1 3" ) {
+                alert("Correct!");
+                window.location="level3.html";
+            }
+                        else {
+                alert("wrong");
+            }
+        });
+    });
+
+</script>
+
+</html>
+
+
+</html>

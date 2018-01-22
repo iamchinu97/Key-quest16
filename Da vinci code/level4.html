@@ -1,0 +1,264 @@
+<!DOCTYPE>
+<html>
+
+<head>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        background-color: rosybrown;
+    }
+    
+    .container {
+        position: relative;
+        margin: auto;
+        height: 768px;
+        width: 1151px;
+    }
+    
+    .bg {
+        position: absolute;
+        z-index: 0;
+    }
+    
+    .box1 {
+        position: absolute;
+        left: 160px;
+        top: 390px;
+        z-index: 1;
+    }
+    
+    .box2 {
+        position: absolute;
+        left: 410px;
+        top: 380px;
+        z-index: 1;
+    }
+    
+    .box3 {
+        position: absolute;
+        z-index: 1;
+        left: 584px;
+        top: 374px;
+    }
+    
+    .scroll {
+        position: absolute;
+        z-index: 1;
+        left: 899px;
+        top: 417px;
+    }
+    
+    .p {
+        display: block;
+        position: absolute;
+        font-size: 50px;
+        color: antiquewhite;
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        top: 280px;
+        left: 40px;
+        z-index: 1;
+    }
+    
+    div p {
+        display: none;
+    }
+    
+    .r {
+        display: block;
+        position: absolute;
+        font-size: 50px;
+        color: antiquewhite;
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        top: 280px;
+        left: 770px;
+    }
+    
+    .s {
+        display: block;
+        position: absolute;
+        font-size: 50px;
+        color: antiquewhite;
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        top: 20px;
+        left: 500px;
+    }
+    
+    .b {
+        display: block;
+        position: absolute;
+        font-size: 55px;
+        color: antiquewhite;
+        text-align: center;
+        height: 60px;
+        width: 400px;
+        top: 550px;
+        left: 500px;
+        opacity: 0.2;
+    }
+    
+    .prs {
+        display: block;
+        position: absolute;
+        font-size: 40px;
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        top: 300px;
+        left: 162px;
+    }
+    
+    .srp {
+        display: block;
+        position: absolute;
+        font-size: 35px;
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        top: 300px;
+        left: 420px;
+    }
+    
+    .rsp {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        top: 300px;
+        left: 595px;
+    }
+    
+    .suspect {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        left: 300px;
+    }
+</style>
+<script src="jquery-3.1.0.min.js"></script>
+
+<body>
+    <div class="container">
+        <img src="Images/lvl4/lv4_0012_Layer-11.png" class="bg">
+        <img src="Images/lvl4/Layer%201.png" class="box1">
+        <img src="Images/lvl4/Layer%204.png" class="box2">
+        <img src="Images/lvl4/Layer%203.png" class="box3">
+        <img src="Images/lvl4/Layer%206.png" class="scroll">
+        <div class="p">
+            <p>P</p>
+        </div>
+        <div class="r">
+            <p>R</p>
+        </div>
+        <div class="s">
+            <p>S</p>
+        </div>
+        <div class="prs">
+            <p>PRS</p>
+        </div>
+        <div class="srp">
+            <p>SRP</p>
+        </div>
+        <div class="rsp">
+            <p>RSP</p>
+        </div>
+        <div class="b">
+            <p>white says i am low but why is that so?.</p>
+        </div>
+        <img src="Images/lvl4/suspect%203.png" class="suspect">
+    </div>
+</body>
+<script>
+    addEventListener("click", function () {
+        var el = document.documentElement,
+            rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+        rfs.call(el);
+    });
+    $(document).keydown(false);
+    $(document).on("contextmenu", function (e) {
+        return false;
+    });
+    $(document).ready(function () {
+        $('.p').click(function () {
+            $('.p p').fadeToggle();
+        });
+        $('.r').click(function () {
+            $('.r p').fadeToggle();
+        });
+        $('.s').click(function () {
+            $('.s p').fadeToggle();
+        });
+        $('.b').click(function () {
+            $('.b p').fadeToggle();
+        });
+        $('.prs').click(function () {
+            $('.prs p').fadeToggle();
+        });
+        $('.rsp').click(function () {
+            $('.rsp p').fadeToggle();
+        });
+        $('.srp').click(function () {
+            $('.srp p').fadeToggle();
+        });
+        var flag = [false, false, false];
+        $('.box1').click(function () {
+            var ans = prompt("Enter passcode.");
+
+            if (ans === "9131") {
+                alert("Correct! Now try next box.");
+                flag[0] = true;
+            } else {
+                alert("Wrong answer.");
+            }
+            if (flag[0] === true && flag[1] === true && flag[2] === true) {
+                alert("Congratulations! You have passed the Level.");
+            }
+        });
+        $('.box2').click(function () {
+            var ans = prompt("Enter passcode.");
+
+            if (ans === "1139") {
+                alert("Correct! Now try next box.");
+                flag[1] = true;
+            } else {
+                alert("Wrong answer.");
+            }
+            if (flag[0] === true && flag[1] === true && flag[2] === true) {
+                alert("Congratulations! You have passed the Level.");
+            }
+        });
+        $('.box3').click(function () {
+            var ans = prompt("Enter passcode.");
+
+            if (ans === "1319") {
+                alert("Correct! All box are opened.");
+                flag[2] = true;
+            } else {
+                alert("Wrong answer.");
+            }
+            if (flag[0] === true && flag[1] === true && flag[2] === true) {
+                alert("Congratulations! You have passed the Level.");
+                window.location.href = "level5.html";
+            }
+        });
+        $('.scroll').click(function () {
+            $('.suspect').fadeToggle();
+        });
+
+    });
+</script>
+
+</html>

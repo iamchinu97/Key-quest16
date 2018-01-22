@@ -1,0 +1,134 @@
+<!DOCKTYPE Html>
+<html>
+
+<head>
+    <title>
+        Level 2
+    </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            text-align: center;
+            background-color: dimgrey;
+        }
+        
+        #back {
+            display: block;
+            position: absolute;
+            margin: auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+            margin-left: 30px;
+            margin-top: 130px;
+            z-index: 0;
+        }
+        
+        #tic {
+            position: absolute;
+            display: none;
+            height: 400px;
+            width: 400px;
+            margin-left: 500px;
+            margin-top: 150px;
+            z-index: 1;
+        }
+        
+        #tic table {
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+        }
+        
+        .sqr {
+            height: 30%;
+            width: 30%;
+            background-color: aliceblue;
+            opacity: 0.6;
+        }
+        
+        area {
+            cursor: default;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+    <img src="Images/Prison%20lvl%202.png" usemap="#Map" id="back" />
+    <map name="Map" id="Map">
+        <area shape="rect" coords="1156,195,1206,258" />
+    </map>
+    <div id="tic">
+        <table>
+            <tr>
+                <td class="sqr" id="11"></td>
+                <td class="sqr" id="12"></td>
+                <td class="sqr" id="13"></td>
+            </tr>
+            <tr>
+                <td class="sqr" id="21"></td>
+                <td class="sqr" id="22"></td>
+                <td class="sqr" id="23"></td>
+            </tr>
+            <tr>
+                <td class="sqr" id="31"></td>
+                <td class="sqr" id="32"></td>
+                <td class="sqr" id="33"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+        $(document).ready(function () {
+            $('#Map').click(function () {
+                $('#tic').fadeIn('slow');
+            });
+            var i = 0;
+            var flag = [false, false, false, false];
+            $('#11').click(function () {
+                flag[0] = true;
+            });
+            $('#22').click(function () {
+                flag[1] = true;
+            });
+            $('#23').click(function () {
+                flag[2] = true;
+            });
+            $('#33').click(function () {
+                flag[3] = true;
+            });
+            $('.sqr').click(function () {
+                $(this).css("background-color", "green");
+                i++;
+                if (i === 4) {
+                    $('.sqr').css("background-color", "aliceblue");
+                    i = 0;
+                    if (flag[0] === true && flag[1] === true && flag[2] === true && flag[3] === true) {
+                        alert("Correct!");
+                        flag = [false, false, false, false];
+
+                    } else {
+                        alert("Wrong.")
+                        flag = [false, false, false, false];
+                    }
+                };
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

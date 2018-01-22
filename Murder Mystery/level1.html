@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    .back{
+        position: absolute;
+        
+    }
+    .dish
+    {
+        position:absolute;
+        top: 380px;
+        left: 1114px;
+    }
+    .scr
+    {
+        position:absolute;
+        top: 362px;
+        left: 134px;
+    }
+    .tree{
+        position:absolute;
+        left: 275px;
+    }
+</style>
+<body>
+    <div class="back"><img class="back1" src="Scene1-A.png"></div>
+    <div class="dish"><img class="dish1" src="Scene1-D.png"></div>
+    <div class="scr"><img class="scr1" src="Scene1-B.png"></div>
+    <div class="tree" ><img class="tree1" src="Scene1-C.png"></div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+    addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function(){
+        var dis= $(".dish1");
+        var scr1= $(".scr1");
+        var scr2= $(".tree1");
+        scr2.hide();
+        dis.on("click",function(){
+            var ans=prompt('Hey...whats going on?'); 
+            if(ans=="dinner")
+            {
+                alert("Correct!");
+                window.location="level2.html";
+            }
+            else
+            {
+                alert("Guess Again");    
+            }
+        });
+        scr1.on("click",function(){
+            scr2.show();
+        });
+        scr2.on("click",function(){
+            scr2.hide();
+        });
+    });
+</script>
+</html>

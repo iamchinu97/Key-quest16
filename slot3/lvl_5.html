@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LEVEL5</title>
+</head>
+<style>
+    *{
+         margin: 0px;
+        padding: 0px;
+        transition:all 1s ease-in;
+    }
+     .bg{
+            position:absolute;
+        margin: auto;
+            text-align: center;
+        
+    }
+
+    .boxclose {
+        position: absolute;
+        top: 510px;
+        left: 86px;
+    }
+    .openbox {
+         position: absolute;
+        top: 510px;
+        left: 156px;
+        display: none;
+    }
+    .photo {
+        position: absolute;
+        top: 120px;
+        left: 1100px;
+        width: 10%;
+    }
+    .Candles {
+        position: absolute;
+        top: 188px;
+        left:  500px;
+        width: 30%;
+        display: none;
+    }
+    </style>
+     <body>
+           <div class="bg">
+        
+        <img src="bgrnd.png">
+        </div>
+    <div class="BOX"> <img class="boxclose" src="boxclose.png"/></div>
+    <div class="BOX1"> <img class="openbox" src="openbox.png"/></div>
+         <div class="BOX2"> <img class="photo" src="photo.png"/></div>
+         <div class="BOX0"> <img class="Candles" src="candles_.png"/></div>
+
+    </body>
+     <script src="jquery1.js"></script>
+        <script>
+		addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+             $(document).ready(function () {
+                 var CLOSE=$(".boxclose");
+                 var OPEN=$(".openbox");
+                 var CANDLES=$(".Candles");
+                 var PHOTO=$(".photo");
+                 CLOSE.on("click",function() {
+                    
+                     var ans=prompt('THE MORE YOU TAKE ME THE MORE YOU LEAVE ME BEHIND');
+                     if(ans=='footprints'){              //CHANGE THE ANSWER
+                         alert("Correct!");
+                         OPEN.show();
+                         PHOTO.on("click",function() {
+                        CANDLES.show();
+                         });
+                         CANDLES.on("click",function() {
+                             var ans1=prompt('ENTER THE ANSWER');
+                     if(ans1=='4123'){              //CHANGE THE ANSWER
+                         alert("Correct!");
+                     }
+                      else {
+                alert("WRONG");
+                      }
+                         });
+                     
+            }
+                 else {
+                    alert("HARD LUCK!!TRY AGAIN");              
+             }
+                 });
+             });
+                         
+    </script>
+</html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>level 5</title>
+</head>
+<style>
+     body {
+        background: url(bg.png) no-repeat fixed center;
+    }
+</style>
+</html>

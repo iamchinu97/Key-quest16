@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+ .back{
+        position: absolute;
+        
+    }
+    .deadbody{
+    	position: absolute; 
+        top: 687px;
+        left: 706px;
+    }
+    .locker{
+    	position:absolute;
+        top: 442px;
+        left: 1247px;
+    }
+  
+   
+    </style>
+    <body>
+    	  <div><img class="back" src="scene2-A.png"></div>
+          <div><img class="deadbody" src="scene2-B.png"></div>
+          <div><img class="locker" src="scene2-C.png"></div>
+    </body>
+    <script src="jquery1.js"></script>
+    <script>
+        addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function(){
+    	 var tummy= $(".deadbody");
+    	 var lock= $(".locker");
+
+    	 lock.on("click",function(){
+    	 	alert("Seems that Vault is Stolen");
+    	 });
+    	
+    	 tummy.on("click",function(){
+    	 	 var ans=prompt('Who is the murderer?');
+    	 	  if(ans=="thief")
+            {
+                alert("Correct!");
+                window.location="level3.html";
+            }
+            else
+            {
+                alert("Try Harder Buddy");    
+            } 
+             });
+    	});
+    </script>
+    </html>

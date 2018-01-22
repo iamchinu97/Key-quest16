@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <script src="jquery1.js"></script> 
+    </head>
+    <style>
+        .bg{
+           position: absolute; 
+            
+        }
+        .honeycomb1
+        {
+            position: absolute;
+            left: 425px;
+            top: 245px;
+            display: none;
+            
+        }
+        .honeycomb2
+        {
+            position: absolute;
+            left: 80px;
+            top: 250px;
+            display: none;
+            
+        }
+        .door
+        {
+            position: absolute;
+            left: 310px;
+            top: 133px;
+           
+            
+        }
+        .hole1
+        {
+         position: absolute;
+         left: 242px;   
+         top: 255px;    
+        }
+        .hole2{
+            
+            position: absolute;
+            left: 385px;
+            top:260px;
+        }
+        
+        
+    </style>
+    <body>
+        <div class="bg">
+            <img src="pb%20lvl%205.jpg">
+        </div>
+        <div class="honeycomb1">
+            <img src="IMG-20160821-WA0008.jpg" width="120px" height="130px">
+        </div>
+        <div class="honeycomb2">
+            <img src="IMG-20160821-WA0007.jpg" width="125px" height="100px">
+        </div>
+        <div class="door">
+            <img src="pb%20lvl%205%20door.jpg">
+        </div>
+        <div class="hole1">
+            <img src="hole1.jpg">
+        </div>
+        <div class="hole2">
+            <img src="hole2.jpg">
+        </div>
+        <script>
+            var a=$(".honeycomb1");
+            var b=$(".honeycomb2");
+            var c=$(".door")
+            var d=$(".hole1");
+            var e=$(".hole2");
+            $(document).ready(function(){
+                
+            $(d).on("click",function(){
+                
+                $(a).fadeIn();
+                
+                
+            })
+            
+            $(e).on("click",function(){
+                $(b).fadeIn();
+            })
+            
+            $(c).on("click",function(){
+                
+                var ans=prompt("Enter your Answer");
+                if(ans=="4613")
+                    {
+                        alert("You Won!! .");
+                    }
+                
+            })
+               
+            })
+        </script>
+    </body>
+</html>

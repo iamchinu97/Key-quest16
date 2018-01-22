@@ -1,0 +1,155 @@
+<html>
+    <head>
+    <script src="jquery1.js"></script> 
+        <title> Level 1 </title>
+    </head>
+    <style>
+        .bg
+        
+    {
+        position: fixed;
+        
+        }
+        * {
+        transition: all 1s ease-in;
+    }
+        .box{
+            position: absolute;
+            left:850px;
+            bottom: 50px;
+        }
+        .door1
+        {
+            position: absolute;
+            left: 100px;
+            bottom: 200px;
+            
+        }
+        .door2
+    
+        {
+            position: absolute;
+            left: 400px;
+            bottom: 200px;
+        }
+        .door3
+        {
+            position: absolute;
+            left: 700px;
+            bottom: 200px;
+           
+            transform-origin: top left;
+        }
+        .door4
+        {
+            position: absolute;
+            left: 1000px;
+            bottom: 200px;
+        }
+        .paper
+        {
+            position: absolute;
+            bottom: 100px;
+            left: 100px;
+            display: none;
+        }
+        .nxtdoor
+        {
+            position: absolute;
+            left: 650px;
+            bottom: 250px;
+            display: none;
+            
+        }
+        .box
+        {
+            
+        }
+        
+        
+       
+        
+    </style>
+    <body>
+        <div class="bg">
+          <img src="bg.png";
+        </div>
+            <div class="box">
+                <img src="lvl-1_0001_Layer-1.png" width="350px" height="150px">
+            </div>
+            <div class="door1">
+                <img src="lvl-1_0003_Layer-2.png" width="200px" height="450px">
+            </div>
+            <div class="door2">
+                <img src="lvl-1_0004_Layer-3.png" width="200px" height="450px">
+            </div>
+            <div class="door3">
+                <img src="lvl-1_0005_Layer-5.png" width="200px" height="450px">
+                
+            </div>
+            <div class="door4">
+                <img src="lvl-1_0002_Layer-4.png" width="200px" height="450px">
+                
+            </div>
+            <div class="paper">
+                <img src="download%20copy.jpg">
+            </div>
+           
+            <script>
+                
+ 
+                var a=$(".box");
+                var b=$(".door1");
+                var c=$(".door2");
+                var d=$(".door3");
+                var e=$(".door4");
+                var f=$(".paper");
+                var g=$(".nxtdoor");
+                $(document).ready(function(){
+                    
+                    $(a).on("click",function(){
+                        $(f).fadeIn(); 
+                    })
+                    
+                    $(d).on("click",function(){
+                        
+                        var ans=prompt("Enter Your Answer");
+                        ans=ans.toLowerCase();
+                        if(ans=="the mona lisa"||ans=="mona lisa")
+                            {
+                                $(d).css("transform-origin","top left");
+                               $(d).css("transform", "rotateY(90deg)");
+                                
+                               setTimeout(function(){
+                                   window.location.href="level2.html";
+                                   
+                               } ,1000);
+                             ;
+                                        
+                                
+                            }
+                        else
+                            {
+                                alert("Wrong Answer");
+                            }
+                        
+                        
+                    })
+                    $(b).on("click",function(){
+                        var ans=prompt("Enter Your ans");
+                        
+                    })
+                    $(c).on("click",function(){
+                            var ans=prompt("Enter Your ans");
+                            })
+                   
+                   $(e).on("click",function(){
+                       
+                       var ans=prompt("Enter Your ans");
+                       
+                   })               
+                }
+                   )
+            </script>
+    </body>
+</html>

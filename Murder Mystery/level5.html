@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    .back{
+        position: absolute;
+    }
+    .scroll{
+        position: absolute;
+        top: 579px;
+        left: 271px;
+    }
+    .adopt{
+        position: absolute;
+        top: 200px;
+        left: 350px;
+        z-index: 1500;
+    }
+    .paint{
+        position: absolute;
+        top: 501px;
+        left: 726px;
+    }
+    .knife{
+        position: absolute;
+        top: 324px;
+        left: 369px;
+    }
+    .cipher{
+        position: absolute;
+        top: 100px;
+        left: 400px;
+        z-index: 2000;
+    }
+</style>
+<body>
+    <div><img class="back" src="Scene5-A.png"></div>
+    <div><img class="paint" src="Scene5-D.png"></div>
+    <div><img class="knife" src="Scene5-E.png"></div>
+    <div><img class="scroll" src="Scene5-B.png"></div>
+    <div><img class="adopt" src="Scene5-C.png"></div>
+    <div><img class="cipher" src="Scene5-F.png"></div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+    addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function(){
+        var var1= $(".back");
+        var var2= $(".scroll");
+        var var3= $(".adopt");
+        var var4= $(".paint");
+        var var5= $(".knife");
+        var var6= $(".cipher");
+        var6.hide();
+        var3.hide();
+        var2.on("click",function(){
+           var3.show(); 
+        });
+        var3.on("click",function(){
+            var3.hide(); 
+        });
+        var4.on("click",function(){
+            var6.show();
+        });
+        var6.on("click",function(){
+            var6.hide();
+        });
+        var5.on("click",function(){
+           var ans=prompt('Who is the Murderer?');
+            if(ans=="MIKELAURENCE" ||ans=="mikelaurence"||ans=="mike laurence")
+            {
+                alert("Correct!");
+                alert("Congratulations...You Won the GAME");
+            }
+            else{
+                alert("Wrong Answer")
+            }
+        });
+    });
+</script>
+</html>

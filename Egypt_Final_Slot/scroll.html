@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL5</title>
+</head>
+<style>
+    * {
+        transition: all 1s ease-in;
+    }
+    
+    .bg {
+       position: absolute;
+        height: 720px;
+        width: 1080px;
+    }
+    
+    .play{
+         width:7%;
+    position: absolute;
+    top: 871.5px;
+    left:1171.5px;
+        
+    
+    </style>
+    <body>
+        <div class="bg1"><img src="images/scroll.png"/></div>
+          <div class="play1"> <img class="play" src="images/play_0000_Layer-1.png"/>  </div>
+        
+</body>
+   
+<script src="jquery1.js"></script>
+<script>
+    $(document).ready(function () {
+        var t = $(".play");
+        
+        t.on("click", function () {
+             
+                
+                window.location="level1.html";
+            
+                        
+            
+        });
+    });
+
+</script>
+
+</html>

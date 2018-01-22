@@ -1,0 +1,28 @@
+<html>
+<head>
+<title></title>    
+</head>
+<style>
+    .rules {
+    position: absolute;
+    }
+    .but{
+        position: absolute;
+        top: 741px;
+        left: 492px;
+    }
+</style>
+<body>
+    <div><img class="rules" src="title.png"></div>
+    <div><img class="but" src="button.png"></div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+     $(document).ready(function(){
+        var var1=$(".but");
+        var1.on("click",function(){
+        window.location="level1.html"; 
+        });
+     });
+</script>
+</html>

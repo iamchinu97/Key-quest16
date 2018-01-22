@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL4</title>
+</head>
+
+<style>
+    body {
+        background-color: lightbrown;
+    }
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+        transition: all 1s ease-in;
+    }
+    
+    .bg1 {
+        position: relative;
+        margin: auto;
+    }
+    
+    .scroll1 {
+        width: 8%;
+        position: absolute;
+        top: 600px;
+        left: 800px;
+    }
+    
+    .scroll2 {
+        width: 8%;
+        position: absolute;
+        top: 650px;
+        left: 500px;
+        z-index: -5;
+    }
+    
+    .scroll3 {
+        width: 8%;
+        position: absolute;
+        top: 600px;
+        left: 850px;
+        z-index: 2;
+    }
+    
+    .scroll_4 {
+        width: 10%;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        display: none;
+    }
+    
+    .txt {
+        width: 8%;
+        position: absolute;
+        top: 52%;
+        left: 46%;
+        z=5;
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="BG"><img src="images/bg.png"></div>
+    <div class="scroll"> <img class="scroll1" src="images/scroll1.png" /><img class="scroll2" src="images/scroll2.png" /> <img class="scroll3" src="images/scroll3.png" /><img class="scroll_4" src="images/scroll_4.png" /></div>
+    <div class="tx"><img class="txt" src="images/txt.png" /></div>
+
+    <script src="jquery1.js"></script>
+    <script>
+        addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+        $(document).ready(function () {
+            var Scroll3 = $(".scroll3");
+            var Scroll_4 = $(".scroll_4");
+            var txtt = $(".txt");
+            Scroll3.on("click", function () {
+                Scroll_4.show();
+                txtt.show();
+            });
+            Scroll_4.on("click", function () {
+                var ans = prompt('enter the answer!');
+                if (ans == "papyrus" || ans == "Papyrus" || ans == "PAPYRUS"||ans=="papyras") {
+                    alert("Correct!");
+                    window.location = "anime4.html";
+                } else {
+                    alert("wrong");
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

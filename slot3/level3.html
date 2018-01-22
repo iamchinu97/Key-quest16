@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL3</title>
+</head>
+<style>
+    * {
+          margin: 0px;
+        padding: 0px;
+        transition: all 1s ease-in;
+    }
+       .bg{
+            position: absolute;
+        margin: auto;
+            text-align: center;
+        
+        }
+    
+.layer2{
+    
+    position: absolute;
+    top:200px;
+    left:500px;
+}
+    </style>
+    <body>
+          <div class="bg">
+        
+        <img src="abcd_0001_Layer-1.png">
+        </div>
+    <div class="layer"> <img class="layer2"  src="abcd_0000_9----3----_-----6-6----4----_-----9-1----6----_--4----9--3--3--.png"/>  </div>
+</body>
+   
+<script src="jquery1.js"></script>
+<script>
+
+addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function () {
+        var t = $(".layer2");
+        
+        t.on("click", function () {
+             var ans = prompt('Complete me!');
+            if (ans == "964" ||ans == "9 6 4" ) {
+                alert("Correct!");
+                window.location="lvl_4.html";
+            }
+                        else {
+                alert("wrong");
+            }
+        });
+    });
+
+</script>
+
+</html>
+
+
+</html>

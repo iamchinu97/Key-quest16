@@ -1,0 +1,57 @@
+<!Doctype html>
+<html>
+<head>
+<title>level 3</title>
+</head>
+    <style>
+     body{
+    overflow: hidden;
+    }
+        .snake{
+        position: absolute;
+left: 466px;
+    top: 132px;
+
+        }
+        .bg{
+        position: absolute;
+                left: -110px;
+              top: -82px;
+    }
+   
+    </style>
+<body>
+    <div class="bg"> <img class="bg" src="bgh.png"></div>
+    <div class="snake"><img class="snake"src="snake.png"/></div>
+    <audio controls>
+    <source src="audio.m4a">
+        
+    </audio>
+</body>
+    <script src="jquery1.js"></script>
+<script>
+            addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function () {
+        var l = $(".snake");
+    
+       
+        l.on("click", function () {
+            var ans = prompt('enter the answer in small caps!');
+            if (ans =="parseltongue") {
+                alert("Correct!");
+                window.location.href="level4.html";
+            }
+            
+        });
+    });
+</script>
+</html>

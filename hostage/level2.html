@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL2</title>
+</head>
+<style>
+    * {
+         margin: 0px;
+        padding: 0px;
+        transition: all 1s ease-in;
+    }
+    
+    .bg {
+          position: absolute;
+     
+        
+    }
+    
+.mirror{
+    position: absolute;
+    top: 300px;
+    left: 960px;
+}
+    </style>
+    <body>
+         <div class="bg">
+        
+        <img src="level2_0001_Layer-3.png">
+        </div>
+    <div class="castle2"> <img class="mirror" src="level2_0000_Layer-4.png"/></div>
+    </body>
+   
+<script src="jquery1.js"></script>
+<script>
+    $(document).ready(function () {
+        var p = $(".mirror");
+        
+        p.on("click", function () {
+             var ans = prompt("What's Common?");
+            if (ans == 'dharmaproduction') {
+                alert("Correct!");
+                window.location="level3.html";
+            }
+                        else {
+                alert("wrong");
+            }
+        });
+    });
+
+</script>
+
+</html>
+
+

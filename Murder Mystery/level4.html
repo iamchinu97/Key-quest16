@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+   .back
+    {
+        position:absolute;
+        width: 1650px;
+    }
+    .drawer{
+        position:absolute;
+        top: 685px;
+        left: 233px;
+    }
+    .cup1{
+        position:absolute;
+        top: 386px;
+        left: 323px;
+    }
+    .cup2{
+        position: absolute;
+        top: 393px;
+        left: 557px;
+    }
+    .comp{
+        position: absolute;
+        top: 561px;
+        left: 1404px;
+    }
+    .deed{
+        position: absolute;
+        top: 250px;
+        left: 500px;
+}
+
+    }
+</style>
+<body>
+    <div><img class="back" src="Scene4-A.png"></div>
+    <div><img class="drawer" src="Scene4-B.png"></div>
+    <div><img class="cup1" src="Scene4-C.png"></div>
+    <div><img class="cup2" src="Scene4-D.png"></div>
+    <div><img class="comp" src="Scene4-E.png"></div>
+    <div><img class="deed" src="Scene4-F.png"></div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+    addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function(){
+        var var1= $(".back");
+        var var2= $(".drawer");
+        var var3= $(".cup1");
+        var var4= $(".cup2");
+        var var5= $(".comp");
+        var var6= $(".deed");
+        var6.hide();
+        var2.on("click",function(){
+            var6.show();
+        });
+        var3.on("click",function(){
+            alert("There is something hidden in this room. Can you find it?");
+        });
+        var4.on("click",function(){
+            alert("Where do you generally keep a Password?");
+        });
+        var6.on("click",function(){
+            var6.hide();
+        });
+        var5.on("click",function(){
+           var ans=prompt('Password!');
+            if(ans==512)
+                {
+                    alert("Correct!");
+                    window.location="level5.html";
+                }
+            else{
+                alert("Wrong Password");
+            }
+        });
+    });
+</script>
+</html>

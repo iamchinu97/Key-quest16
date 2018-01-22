@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL2</title>
+</head>
+<style>
+    * {
+         margin: 0px;
+        padding: 0px;
+        transition: all 1s ease-in;
+    }
+    
+    .bg {
+          position: absolute;
+     
+        
+    }
+    
+.mirror{
+     width:80px;
+    position: absolute;
+    top: 320px;
+    left: 300px;
+}
+    .mirror1{
+        width:80px;
+    position: absolute;
+    top: 351px;
+    left: 1080px;
+}
+    .mirror2{
+         width:80px;
+    position: absolute;
+    top: 400px;
+    left: 120px;
+}
+    .mirror3{
+         width:80px;
+    position: absolute;
+    top: 350px;
+    left: 940px;
+}
+     .mirror4{
+         width:80px;
+    position: absolute;
+    top: 420px;
+    left: 290px;
+}
+    .mirror5{
+        width:80px;
+    position: absolute;
+    top: 320px;
+    left: 300px;
+        display: none;
+}
+    .mirror6{
+         width:80px;
+    position: absolute;
+    top: 350px;
+    left: 120px;
+         display: none;
+}
+    .mirror7{
+         width:80px;
+    position: absolute;
+    top: 350px;
+    left: 940px;
+         display: none;
+}
+     .mirror8{
+         width:80px;
+    position: absolute;
+    top: 340px;
+    left: 1080px;
+          display: none;
+}
+    </style>
+    <body>
+         <div class="bg">
+        
+        <img src="parking.png">
+        </div>
+    <div class="castle2"> <img class="mirror" src="car1.png"/></div>
+         <div class="castle3"> <img class="mirror1" src="car2.png"/></div>
+         <div class="castle4"> <img class="mirror2" src="car3.png"/></div>
+         <div class="castle5"> <img class="mirror3" src="car4.png"/></div>
+        <div class="castle6"> <img class="mirror4" src="dictionary.png"/></div>
+        <div class="castle7"> <img class="mirror5" src="call_0000_1937.png"/></div>
+         <div class="castle8"> <img class="mirror6" src="call_0001_1866.png"/></div>
+         <div class="castle9"> <img class="mirror7" src="call_0002_1963.png"/></div>
+        <div class="castle0"> <img class="mirror8" src="call_0003_1916.png"/></div>
+    </body>
+   
+<script src="jquery1.js"></script>
+<script>
+    $(document).ready(function () {
+        var p = $(".mirror");
+          var p1 = $(".mirror1");
+  var p2 = $(".mirror2");
+          var p3 = $(".mirror3");
+ var p4= $(".mirror4");
+          var p5 = $(".mirror5");
+  var p6 = $(".mirror6");
+          var p7 = $(".mirror7");
+         var p8 = $(".mirror8");
+        p.on("click", function () {
+            p5.show();
+        });
+         p1.on("click", function () {
+            p8.show();
+        });
+         p2.on("click", function () 
+               {
+            p6.show();
+        });
+         p3.on("click", function () {
+            p7.show();
+        });
+          p4.on("click", function () {
+              var ans=prompt('enter the answer');
+                     if(ans=='1916196318661937'){
+                         alert("Correct!");
+                         window.location = " "
+                     }
+                      else {
+                alert("wrong");
+            }  
+        });
+    });
+
+</script>
+
+</html>
+
+

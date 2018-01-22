@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL2</title>
+</head>
+<style>
+    * {
+        transition: all 1s ease-in;
+    }
+    
+    .bg {
+          position: absolute;
+     
+        
+    }
+    
+.mirror{
+     width:80px;
+    position: absolute;
+    top: 380px;
+    left: 150px;
+}
+    .mirror1{
+        width:200px;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+        display: none;
+}
+    .mirror2{
+         width:80px;
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
+
+    </style>
+    <body>
+         <div class="bg">
+        
+        <img src="level4_0003_Background.png">
+        </div>
+    <div class="castle2"> <img class="mirror" src="level4_0002_Layer-1.png"/></div>
+         <div class="castle3"> <img class="mirror1" src="level4_0001_Layer-2.png"/></div>
+        <div class="castle4"> <img class="mirror2" src="level4_0000_Layer-3.png"/></div>
+    </body>
+   
+<script src="jquery1.js"></script>
+<script>
+    $(document).ready(function () {
+        var p = $(".mirror");
+        var t=$(".mirror1");
+        var s=$(".mirror2");
+        p.on("click", function () {
+             t.show();
+        });
+         s.on("click", function () {
+                 var ans = prompt('Answer is!');
+            if (ans == "1" ) {
+                alert("Correct!");
+                window.location="level5.html ";
+            }
+                        else {
+                alert("wrong");
+            }
+        });
+    });
+
+</script>
+    
+
+</html>
+
+

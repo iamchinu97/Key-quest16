@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LEVEL2</title>
+</head>
+<style>
+    *{
+        transition:all 1s ease-in;
+    }
+    
+    
+    
+ 
+   
+    .level2me
+    
+    {
+        
+        position: absolute;
+       top: 67px;
+    left: 352px;
+        
+        
+    }
+   
+    </style>
+    <body>
+    <div class="message1"> <img class="level2me" src="level2me.png" /></div>
+    
+        
+        <script src="jquery1.js"></script>
+        <script>
+    $(document).ready(function () {
+        var message= $(".level2me");
+        
+         
+    
+        
+    
+        message.on("click", function () {
+            var ans = prompt('Enter the country in which bomb is planted');
+           if (ans=="united states") {
+                alert("Correct");
+                window.location.href = "level3.html"
+            }
+            else {
+                alert("Wrong");
+            }
+    })
+    });
+        </script>
+</body>
+</html>

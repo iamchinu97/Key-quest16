@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <script src="jquery1.js"></script>
+    </head>
+    <style>
+         .bg
+        {
+            position:fixed;
+        }
+        .rama{
+            position: absolute;
+            left: 611px;
+            bottom: 358px;
+            display: none;
+            
+        }
+        .ram
+        {
+            position: absolute;
+            left: 958px;
+            bottom: 390px;
+            display: none;
+            
+            
+        }
+        .capture
+        {
+            position: absolute;
+            left: 665px;
+            bottom: 516px;
+            display: none;
+        }
+    </style>
+    <body>
+        <img class="bg" src="p%20b%20lvl%204.jpg" alt="level4" usemap="#yoo">
+        <div class="rama">
+            <img src="speech-bubble-md%20(1).png">
+        </div>
+         <div class="ram">
+            <img src="Julius_caesar_2.jpg" width="150px" height="200px">
+        </div>
+        <div class="capture">
+            <img src="Capture.PNG" width="200px">
+        </div>
+        <map name="yoo">
+        <area class="face1" shape="poly" coords="653,255,628,239,602,271,650,308"  style="cursor:default">
+        <area class="manhole" shape="poly" coords="1009,354,1039,387,1181,382,1133,337"  style="cursor:default">    
+        <area class="face2"  shape="poly" coords="860,263,870,314,913,310,910,256"  style="cursor:default">    
+        </map>
+        <script>
+            var a=$(".face1");
+            var b=$(".manhole");
+            var c=$(".face2");
+            
+            $(document).ready(function(){
+                $(a).on("click",function(){
+                    $(".rama").fadeIn();
+                    $(".capture").fadeIn();
+                })
+                
+                $(c).on("click",function(){
+                    $(".ram").fadeIn();
+                   
+                })
+                
+                $(b).on("click",function(){
+                    var ans=prompt("Enter Your Ans");
+                    ans=ans.toLowerCase();
+                    if(ans=="great job you got it")
+                        {
+                            alert("Correct Answer");
+                            window.location.href="level5.html";
+                        }
+                    else
+                        {
+                            alert("Wrong Answer Try again !!");                        }
+                    
+                    
+                })
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE Html>
+<html>
+
+<head>
+    <title>
+        Level 3
+    </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: dimgrey;
+        }
+        
+        #container {
+            position: relative;
+            display: block;
+            width: 1280px;
+            height: 800px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            margin: auto;
+            z-index: 0;
+        }
+        
+        #back {
+            position: absolute;
+            z-index: 1;
+        }
+        
+        #knife {
+            position: absolute;
+            z-index: 2;
+            left: 154px;
+            top: 406px;
+        }
+        
+        #mirror {
+            position: absolute;
+            z-index: 2;
+            left: 1104px;
+            top: 256px;
+        }
+        
+        #door {
+            position: absolute;
+            z-index: 2;
+            left: 322px;
+            top: 287px;
+            transform-origin: top right;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+        }
+        
+        #book {
+            position: absolute;
+            z-index: 2;
+            left: 0px;
+            top: 697px;
+        }
+        
+        #wadrobe {
+            position: absolute;
+            z-index: 2;
+            left: 455px;
+            top: 200px;
+        }
+        
+        #speak {
+            display: none;
+            width: 50px;
+            text-align: center;
+            position: absolute;
+            z-index: 3;
+            font-family: sans-serif;
+            color: crimson;
+            font-size: 30px;
+            left: 1140px;
+            top: 350px;
+        }
+        
+        #scroll {
+            display: none;
+            position: absolute;
+            left: 500px;
+            top: 200px;
+            z-index: 3;
+        }
+        
+        #suspect {
+            display: none;
+            position: absolute;
+            left: 600px;
+            top: 50px;
+            z-index: 3;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <img src="Images/lvl3/Background.png" id="back">
+        <img src="Images/lvl3/Layer%201.png" id="knife">
+        <img src="Images/lvl3/lvl-1_0004_Layer-2.png" id="mirror">
+        <p id="speak">Do you think i am useful?</p>
+        <img src="Images/lvl3/lvl-1_0002_Layer-3.png" id="door">
+        <img src="Images/lvl3/lvl-1_0001_Layer-4.png" id="book">
+        <img src="Images/lvl3/lvl-1_0000_layer-5.png" id="wadrobe">
+        <img src="Images/lvl3/knife_click.png" id="scroll">
+        <img src="Images/lvl3/suspect 2.png" id="suspect">
+    </div>
+    <script>
+        addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+        $(document).ready(function () {
+            $('#mirror').click(function () {
+                
+                $('#speak').toggle('fast');
+                
+            });
+            $('#speak').fadeOut('slow')
+            $('#wadrobe').click(function () {
+                $('#suspect').fadeToggle('fast');
+            });
+            $('#knife').click(function () {
+                alert("Congratulations Murder Weapon found!");
+            });
+            $('#book').click(function () {
+                $('#scroll').fadeToggle('fast');
+            });
+            $('#door').click(function () {
+                var ans = prompt("Which possible Letters replaces '?' ?(Alphabetically without spaces)");
+                ans = ans.toLowerCase();
+                if (ans === 'tux') {
+                    alert("Corrrect!");
+                    $('#door').css("transform", "rotateY(110deg)");
+                    setTimeout(function () {
+                        window.location.href = "level4.html";
+                    }, 2000)
+                } else alert("Wrong.");
+            });
+        });
+    </script>
+</body>
+
+</html>

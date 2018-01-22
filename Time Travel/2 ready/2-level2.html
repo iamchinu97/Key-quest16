@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    .back{
+        position: absolute;
+    }
+    .dino{
+        position: absolute;
+        top: 51px;
+        left: 214px;
+    }
+    .man{
+        position: absolute;
+        top: 570px;
+        left: 322px;
+
+    }
+    .dil{
+        position: absolute;
+        top: 433px;
+        left: 134px;
+    }
+</style>
+<body>
+    <div><img class="back" src="Scene2-A.png"></div>
+    <div><img class="dino" src="Scene2-B.png"></div>
+    <div><img class="man" src="Scene2-C.png"></div>
+    <div><img class="dil" src="Scene2-D.png"></div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+     addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function(){
+        var var1= $(".dino");
+        var var2= $(".man");
+        var var3= $(".dil");
+        var3.hide();
+        var2.on("click",function(){
+            var3.show();
+        });
+        var3.on("click",function(){
+            var3.hide();
+        });
+        var1.on("click",function(){
+            var ans=prompt("Whats my Name?");
+            if(ans=="TRex"||ans=="T-Rex"||ans=="trex"||ans=="t-rex")
+            {
+                alert("Correct!");
+                window.location="2-level3.html";
+            }
+            else{
+                alert("Wrong Answer! Try Again");
+            }
+        });
+    });
+</script>
+</html>

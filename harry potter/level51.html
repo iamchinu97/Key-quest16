@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>level 5</title>
+</head>
+<style>
+    .dark{
+    position: absolute;
+        left:45%;
+        top:50%;
+    }
+    .dr
+    {
+        position :absolute;
+        left:247px;
+        top:-19px;
+    }
+        </style>
+    <body background ="bg.png"width=100% height=100%>
+       <div class="dark"> <img class ="dark" src="dark.png" />
+           <div class="dr"><img class="dr" src="dr.png"</div>
+</div>
+       
+    </body>
+     <script src="jquery1.js"></script>
+<script>
+    $(document).ready(function () {
+        var h = $(".dark");
+        
+       
+       
+        h.on("click", function () {
+            var ans = prompt('enter the answer in small letters!');
+            if (ans =="voldemort") {
+                alert("Correct!");
+                window.location = ""
+            }
+            else {
+                alert("wrong");
+            }
+        })
+    });
+</script>
+</html>

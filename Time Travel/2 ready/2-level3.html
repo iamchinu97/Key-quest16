@@ -1,0 +1,91 @@
+<html>
+<head>
+</head> 
+<style>
+    .bg{
+        position: absolute;
+    }    
+    .loki{
+        position: absolute;
+        left: 54px;
+        top: 490px;
+    }
+    .odin{
+        position: absolute;
+        left: 612px;
+        top: 167px;
+    }
+    .thor{
+        position: absolute;
+        left: 594px;
+        top: 662px;
+    }
+    .talk1{
+        position:absolute;
+        z-index: 99;
+        left: -86px;
+        top: 188px;
+    }
+    .talk{
+        position: absolute;
+        z-index: 99;
+        left: 459px;
+        top: 362px;
+    }
+</style>
+<body>
+    <div><img class="bg" src="Scene3-A.png"/></div>
+    <div><img class="loki" src="Scene3-B.png"/></div>
+    <div><img class="odin" src="Scene3-C.png"/></div>
+    <div><img class="thor" src="Scene3-D.png"/></div>
+    <div><img class="talk" src="Scene3-H.png"/></div>
+    <div><img class="talk1" src="Scene3-G.png"</div>
+    </body>
+    <script src="jquery1.js"></script>
+    <script>
+         addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+        $(document).ready(function(){
+        var lok=$(".loki");
+        var odi=$(".odin");
+        var tho=$(".thor");
+        var a=$(".talk");
+        var b=$(".talk1");
+        b.hide();
+        a.hide();
+        lok.on("click",function(){
+               b.show();
+            });
+        b.on("click",function(){
+            b.hide();
+        });
+        tho.on("click",function(){
+            a.show();
+        });
+        a.on("click",function(){
+            a.hide();
+        });
+        odi.on("click",function(){
+            var ans=prompt("______ Odin");
+            if(ans=="allfather")
+                {
+                    alert("Correct!");
+                    window.location="2-level4.html";
+                }
+            else
+            {
+                alert("Guess again");   
+            }
+        })
+        });
+    </script>
+
+</html>

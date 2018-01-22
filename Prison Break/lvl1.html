@@ -1,0 +1,124 @@
+<!DOCTYPE Html>
+<html>
+
+<head>
+    <title>
+        Level 1
+    </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+        
+        body {
+            text-align: center;
+            background-color: dimgrey;
+        }
+        
+        #back {
+            display: block;
+            position: relative;
+            background-image: url(Images/lvl1.jpg);
+            height: 768px;
+            width: 1024px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin: auto;
+            box-shadow: 5px 5px 3px rgba(0, 0, 0, .5);
+            z-index: 0;
+        }
+        
+        #click {
+            position: absolute;
+            height: 100px;
+            width: 120px;
+            margin-top: 200px;
+            margin-left: 885px;
+            z-index: 1;
+        }
+        
+        #tic {
+            position: absolute;
+            background-image: url(Images/tic%20tac%20toe.png);
+            height: 250px;
+            width: 250px;
+            background-repeat: no-repeat;
+            margin-top: 259px;
+            margin-left: 387px;
+            background-size: contain;
+            display: none;
+            z-index: 2;
+            opacity: 0.9;
+        }
+        
+        #poster {
+            position: absolute;
+            display: block;
+            height: 200px;
+            width: 70px;
+            margin-top: 150px;
+            margin-left: 50px;
+            text-align: center;
+            color: aliceblue;
+            font-family: sans-serif;
+            z-index: 1;
+        }
+        
+        #t {
+            display: none;
+            margin-top: 75px;
+            z-index: 1;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.1.0.min.js">
+    </script>
+</head>
+
+<body>
+    <div id="back">
+        <div id="click"></div>
+        <div id="tic"></div>
+        <div id="poster">
+            <p id="t">Know me?
+                <p>
+        </div>
+    </div>
+    <script>
+        addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+        $(document).ready(function () {
+            $('#click').one("click", function () {
+                $('#tic').fadeIn('slow');
+                setTimeout(function () {
+                    $('#tic').fadeOut('slow');
+                }, 3000)
+            });
+            $('#poster').click(function () {
+                $('#t').toggle('fast');
+                setTimeout(function () {
+                    var ans = prompt("Answer?");
+                    if (ans.toLowerCase() === "shawshank redemption") {
+                        alert("Correct Answer");
+                        window.open("lvl2.html", "_self");
+                    } else {
+                        alert("Failed");
+                        window.open("lvl1.html", "_self");
+                    }
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+
+</html>

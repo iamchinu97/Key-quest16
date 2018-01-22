@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    .back{
+        position: absolute;
+    }
+    .shut{
+        position: absolute;
+        top: 316px;
+        left: 316px;
+
+    }
+    .star{
+        position: absolute;
+        top: 97px;
+        left: 865px;
+
+    }
+</style>
+<body>
+    <div><img class="back" src="Scene5-A.png"></div>
+    <div><img class="shut" src="Scene5-B.png"></div>
+    <div><img class="star" src="Scene5-C.png"></div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+     addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function(){
+        var var1= $(".shut");
+        var var2= $(".star");
+        var2.on("click",function(){
+           alert("It's a Constellation maybe!");
+        });
+        var1.on("click",function(){
+           var ans=prompt("Future Space Mission");
+            if(ans=="orion nasa"||ans=="orion NASA"||ans=="orion NASA"||ans=="nasa orion"||ans=="orion"||ans=="Orion")
+            {
+                alert("Correct!");
+                alert("Congratulation! You won the GAME");
+            }
+            else{
+                alert("Wrong Answer! Try Harder...Its a final level");
+            }
+        });
+    });
+</script>
+</html>

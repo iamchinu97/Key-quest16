@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>level 5</title>
+</head>
+<style>
+     body{
+    overflow: hidden;
+    }
+    .dark{
+    position: absolute;
+            left: 310px;
+            top: 154px;
+    }
+     .bg{
+        position: absolute;
+    }
+      .dr
+    {
+        position :absolute;
+        left:550px;
+        top:150px;
+    }
+    
+   
+    </style>
+    <body>
+          <div class="bg"> <img class="bg" src="bg.png"></div>
+       <div class="dark"> <img class ="dark" src="dark.png" />
+</div>
+         <div class="dr"><img class="dr" src="dr.png"</div>
+       
+    </body>
+     <script src="jquery1.js"></script>
+<script>
+    addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+    $(document).ready(function () {
+        var h = $(".dark");
+        
+       
+       
+        h.on("click", function () {
+            var ans = prompt('enter the answer in small letters!');
+            if (ans =="voldemort") {
+                alert("Correct,congrats you win!");
+                window.location = ""
+            }
+            
+        })
+    });
+</script>
+</html>

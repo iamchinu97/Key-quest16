@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ANIME1</title>
+</head>
+<style>
+    * {
+        transition: all 1s ease-in;
+    }
+     body {
+        background: url(images/tomb_1.png) no-repeat fixed center;
+    }
+    .Guard1 {
+        position :absolute;
+        top: 50%;
+        left:30%;
+    }
+    .Guard2 {
+        position :absolute;
+        top: 50%;
+        left:50%;
+    }
+    .Guard3 {
+        position :absolute;
+        top: 50%;
+        left:5%;
+    }
+    .Guard4 {
+        position: absolute;
+        top:50%;
+        left: 75%;
+    }
+    .Pyramid {
+        width:10%;
+        position: absolute;
+        top: 85%;
+        left: 85%;
+    }
+     </style>
+    <body>
+    <div class="guard"> <img class="Guard1" src="images/guard_1.png" /><img class="Guard2" src="images/gd.png"/><img class="Guard3" src="images/guar.png"/><img class="Guard4" src="images/guar.png"/></div>
+        <div class=" pyr"><img class="Pyramid" src="images/pym.png"/></div>
+        
+        <script src="jquery1.js"></script>
+        <script>
+         $(document).ready(function () {
+        var GUARD2 = $(".Guard2");
+             var PYRAMID = $(".Pyramid");
+              $(PYRAMID).on("click", function () {
+                // alert();
+                   window.location.href="level5.html";
+                   });
+    });
+        </script>
+</body>  
+</html>

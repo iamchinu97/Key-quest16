@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Level1</title>
+</head>
+<style>
+*{
+transition:all 1s ease-in;
+}
+body
+    
+{
+background: url(bg2.png) no-repeat fixed center;
+ overflow:hidden;  
+}
+.post
+{
+width:10%;
+position:absolute;
+top:50%;
+left:17%;
+    z-index:2;
+
+}
+.man
+{
+width:15%;
+position:absolute;
+top:50%;
+left:5%;
+    z-index: 2;
+
+}
+.letter
+{
+width:10%;
+position:absolute;
+top:40%;
+left:40%;
+ display: none;
+
+}
+</style>
+<body>
+    <div class ="Post1"><img class="post" src="post.png"/></div><div class="man1"><img class="man" src="man.png"/></div><div class="Letter"><img class="letter" src="letter.png"/>
+    </div>
+</body>
+<script src="jquery1.js"></script>
+<script>
+$(document).ready(function()
+{
+var post1=$(".post");
+var man1=$(".man");
+var letter1=$(".letter");
+man1.on("click",function()
+{
+letter1.show();
+});
+post1.on("click",function()
+{
+ var ans = prompt('enter the answer!');
+            if (ans == "bomb" || ans == "Bomb" || ans=="BOMB") {
+                alert("Correct!");
+                window.location.href ="level2.html"
+            }
+            else {
+                alert("wrong");
+            }
+    })
+     });
+        </script>
+    
+</html>

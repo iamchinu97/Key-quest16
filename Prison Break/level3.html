@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <script src="jquery1.js"></script>
+    </head>
+    <style>
+        .rama{
+            
+        
+            position: absolute;
+            bottom:50px;
+            left: 540px;
+            display: none;
+        }
+        
+    </style>
+    <body>
+        
+        <div class="rama" >
+            <img src="download2.jpg">
+            
+        </div>
+        <center><img src="pb%20lvl%203.jpg" alt="level3" usemap="#yoo"></center>
+        <map name="yoo">
+            <area class="window1" shape="poly" coords="344,631,666,609,660,269,348,265"  style="cursor:default">
+            <area class="window2" shape="poly" coords="1228,252,1234,588,1612,602,1632,200" style="cursor:default" >
+            <area class="ram" shape="poly" coords="1262,765,1262,918,1418,944,1423,784" style="cursor:default">
+            <area class="computer" shape="poly" coords="1041,587,1160,591,1165,580,1150,565,1150,512,1069,516" style="cursor:default">
+            <area class="paper" shape="poly" coords="1800,624,1802,676,1836,672,1836,625"  style="cursor:default">
+            
+            
+        </map>
+        <script>
+            $(document).ready(function(){
+                var a=$(".window1");
+                var b=$(".window2");
+                var c=$(".ram");
+                var d=$(".computer");
+                var e=$(".paper");
+                var f=$(".rama")
+                
+                $(a).on("click",function(){
+                    
+                    var ans=prompt("Enter Your Answer:");
+                    if(ans=="window"||ans=="Window")
+                        {
+                            alert("Your Answer is Correct");
+                            window.location.href="level4.html";
+                        }
+                    else
+                        {
+                            alert("Wrong Answer ! Try again !");
+                        }
+                })
+                
+                $(b).on("click",function(){
+                    
+                    
+                    var ans=prompt("Enter Your Answer:");
+                    if(ans=="window"||ans=="Window")
+                        {
+                            alert("Your Answer is Correct");
+                            window.location.href="level4.html";
+                        }
+                    else
+                        {
+                            alert("Wrong Answer ! Try again !");
+                        }
+                })
+                
+                $(c).on("click",function(){
+                    
+                    prompt("Enter Your code :");
+                    
+                })
+                
+                $(d).on("click",function(){
+                    
+                    prompt("Enter Your code :");
+                    
+                })
+                
+                $(e).on("click",function(){
+                    
+                    $(f).fadeIn();
+                })
+              
+                })
+         
+        </script>
+    </body>
+</html>

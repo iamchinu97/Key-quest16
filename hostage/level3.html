@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL3</title>
+</head>
+<style>
+    * {
+         
+        transition: all 1s ease-in;
+    }
+    
+    .bg {
+          position: absolute;
+     
+        
+    }
+    
+.mirror{
+    width: 100px;
+    position: absolute;
+    top: 183px;
+    left:1200px;
+}
+    </style>
+    <body>
+         <div class="bg">
+        
+        <img src="background_0000_Layer-1.png">
+        </div>
+    <div class="castle"> <img class="mirror" src="mirror.png"/></div>
+    </body>
+   
+<script src="jquery1.js"></script>
+<script>
+    $(document).ready(function () {
+        var t = $(".mirror");
+        
+        t.on("click", function () {
+             var ans = prompt('Answer is!');
+            if (ans == "20:01" ) {
+                alert("Correct!");
+                window.location="level4.html";
+            }
+                        else {
+                alert("wrong");
+            }
+        });
+    });
+
+</script>
+
+</html>
+
+
+</html>

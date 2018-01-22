@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LEVEL5</title>
+</head>
+<style>
+    *{
+        transition:all 1s ease-in;
+    }
+    
+    body {
+        background: url(bgg.png) no-repeat fixed center;
+    }
+    
+ 
+   
+    .bomb5
+    
+    {
+        width: 10%;
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        
+        
+    }
+   
+    </style>
+    <body>
+   
+    <div class="bomb1"><img class="bomb5" src="bomb5.png"/></div>
+        
+        <script src="jquery1.js"></script>
+        <script>
+    $(document).ready(function () {
+        
+        var bombb= $(".bomb5");
+         
+    
+        
+    
+        bombb.on("click", function () {
+            var ans = prompt('Only 5 min remaining Enter password!');
+            if (ans == "16351") {
+                alert("Correct,You Win!");
+                window.location = " "
+            }
+            else {
+                alert("Wrong");
+            }
+    })
+    });
+        </script>
+</body>
+</html>

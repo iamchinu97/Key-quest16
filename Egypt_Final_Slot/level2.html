@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL3qixi</title>
+</head>
+<style>
+    * {
+        transition: all 1s ease-in;
+    }
+    
+    .bg {
+        position: absolute;
+    }
+    
+    .LAYER2 {
+        width: 10%;
+        position: absolute;
+        top: 280px;
+        left: 640px;
+    }
+    
+    .layer3 {
+        width: 20%;
+        position: absolute;
+        top: 400.5px;
+        left: 1093.5px;
+    }
+</style>
+
+<body>
+    <div class="bg1"><img src="images/LAYER1.png"></div>
+    <div class="head"><img class="LAYER2" src="images/LAYER2.png" /></div>
+    <div class="pyr"><img class="layer3" src="images/layer3.png" /></div>
+
+</body>
+
+<script src="jquery1.js"></script>
+<script>
+    addEventListener("click", function () {
+        var el = document.documentElement,
+            rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+        rfs.call(el);
+    });
+    $(document).keydown(false);
+    $(document).on("contextmenu", function (e) {
+        return false;
+    });
+    $(document).ready(function () {
+        var H = $(".LAYER2");
+        var P = $(".layer3");
+        H.on("click", function () {
+            var ans = prompt('enter the answer!');
+            if (ans == 'sphinx' || ans == 'Sphinx') {
+                alert("Correct!");
+                window.location = "anime2.html";
+            } else {
+                alert("wrong");
+            }
+        });
+    });
+</script>
+
+</html>

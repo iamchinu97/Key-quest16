@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEVEL5</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        transition: all 1s ease-in;
+    }
+    
+    .bg {
+        position: relative;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .layer2 {
+        width: 7%;
+        position: absolute;
+        top: 518px;
+        left: 945px;
+    }
+</style>
+
+<body>
+    <div class="bg">
+
+        <img src="images/intro_egypt_0002_Layer-6.png">
+    </div>
+    <div class="layer"> <img class="layer2" src="images/intro_egypt_0001_man.png" /> </div>
+</body>
+
+<script src="jquery1.js"></script>
+<script>
+    addEventListener("click", function () {
+        var el = document.documentElement,
+            rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+        rfs.call(el);
+    });
+    $(document).keydown(false);
+    $(document).on("contextmenu", function (e) {
+        return false;
+    });
+    $(document).ready(function () {
+        var t = $(".layer2");
+
+        t.on("click", function () {
+
+            window.location = "level1.html"
+
+
+        });
+    });
+</script>
+
+</html>

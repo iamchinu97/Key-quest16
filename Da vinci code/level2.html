@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        Level 2
+    </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: dimgrey;
+        }
+        
+        #container {
+            position: relative;
+            display: block;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            margin: auto;
+            z-index: 0;
+            height: 675px;
+            width: 1080px;
+        }
+        
+        #background {
+            position: absolute;
+            z-index=1;
+            margin: auto;
+        }
+        
+        .series {
+            position: absolute;
+            z-index: 2px;
+        }
+        
+        #num1 {
+            top: 217px;
+            left: 900px;
+            position: absolute;
+        }
+        
+        #num2 {
+            top: 214px;
+            left: 515px;
+            position: absolute;
+        }
+        
+        #num3 {
+            top: 200px;
+            left: 175px;
+            position: absolute;
+        }
+        
+        #num4 {
+            top: 225px;
+            left: 25px;
+            position: absolute;
+        }
+        
+        #scroll {
+            position: absolute;
+            top: 400px;
+            left: 100px;
+            height: 100px;
+        }
+        
+        #paper {
+            position: absolute;
+            top: 180px;
+            left: 360px;
+        }
+        
+        #door2 {
+            position: absolute;
+            transform-origin: top right;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            top: 238px;
+            left: 738px;
+            height: 265px;
+        }
+        
+        .door1 {
+            position: absolute;
+            transform-origin: top right;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            top: 242px;
+            left: 627px;
+            height: 271px;
+        }
+        
+        .scroll1 {
+            position: absolute;
+            left: 500px;
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+
+    <div id="container">
+        <img src="Images/lvl2/lvl-1_0008_Layer-0.png" id="background">
+        <img src="Images/lvl2/lvl-1_0000_3.png" class="series" id="num1" width="50px" height="50px">
+        <img src="Images/lvl2/lvl-1_0001_2.png" class="series" id="num2" width="50px" height="50px">
+        <img src="Images/lvl2/lvl-1_0002_1-.png" class="series" id="num3" width="50px" height="50px">
+        <img src="Images/lvl2/lvl-1_0003_1.png" class="series" id="num4" width="50px" height="50px">
+        <img src="Images/lvl2/lvl-1_0004_Layer-2.png" id="scroll">
+        <img src="Images/lvl2/lvl-1_0005_Layer-1.png" id="paper" width="75px" height="100px">
+        <img src="Images/lvl2/lvl-1_0007_Layer-3.png" id="door2">
+        <img src="Images/lvl2/lvl-1_0006_Layer-4.png" class="door1">
+        <img src="Images/lvl2/suspect1.png" class="scroll1">
+    </div>
+
+    <script>
+        addEventListener("click", function () {
+            var el = document.documentElement,
+                rfs = el.requestFullscreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+            rfs.call(el);
+        });
+        $(document).keydown(false);
+        $(document).on("contextmenu", function (e) {
+            return false;
+        });
+        $(document).ready(function () {
+
+            $("#paper").on("click", function () {
+
+                alert("This is Fibonacci series");
+            })
+
+            $("#scroll").on("click", function () {
+
+                $(".scroll1").fadeToggle();
+
+            })
+
+            $(".door1").on("click", function () {
+
+                var ans = prompt("Enter the 10th element of fibonaci series");
+                if (ans === "34") {
+                    alert("Correct!");
+                    window.location.href = "level3.html";
+                } else {
+                    alert("Wrong Answer");
+                }
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>
